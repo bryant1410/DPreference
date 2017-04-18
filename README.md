@@ -10,19 +10,19 @@ Google even deprecated the multiprocess support because it never worked relieabl
 
 DPreference is a way solving this problem powered by a ContentProvider. It works in multiple processed mode safely. You can declare your provider in a remote process, if you don't declare it in AndroidManifest.xml, it is operating in main process by default.
 
-####Features
+#### Features
 - **works multiprocess safely**
 - the same api like SharePreference
 - compat old app versions, don't need to upgrade.
   DPreference is just a wrapper of original sharepreference with contentprovider.
 
-####Usage
+#### Usage
 ```
        DPreference dPreference = new DPreference(context, "default");
        dPreference.setPrefString( "key", "value");
 
 ```
-####Compare With Tray(https://github.com/grandcentrix/tray/)
+#### Compare With Tray(https://github.com/grandcentrix/tray/)
 - **DPreference** 
     `setString` called 1000 times cost : 375 ms
     `getString` called 1000 times cost : 186 ms
@@ -30,7 +30,7 @@ DPreference is a way solving this problem powered by a ContentProvider. It works
     `setString` called 1000 times cost : 13699 ms 
     `getString` called 1000  times cost : 3496 ms
 
-####So DPreference has a better performance.
+#### So DPreference has a better performance.
 
 
   
